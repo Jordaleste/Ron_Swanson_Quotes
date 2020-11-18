@@ -12,13 +12,9 @@ import Foundation
 
 class SwansonManager: ObservableObject {
     
-    @Published var quote = [String]() {
-        didSet {
-            completionHandler?(quote)
-        }
-    }
+    @Published var quote = [String]()
     
-    //This is called in our widget
+    //This is called in our widget and below to send our quote back to our widget
     var completionHandler: (([String]) -> Void)?
     
     func fetchQuote() {
@@ -41,6 +37,9 @@ class SwansonManager: ObservableObject {
                         DispatchQueue.main.async {
                             
                             self.quote = parsedQuotes
+                            
+                            //now we can our completionhandler to give the quote back to our widget process.
+                            self.completionHandler?(self.quote)
                         }
                     }
                 } catch let error as NSError {

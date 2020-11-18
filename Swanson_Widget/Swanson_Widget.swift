@@ -31,7 +31,7 @@ struct Provider: TimelineProvider {
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         let swansonManager = SwansonManager()
         swansonManager.completionHandler = { quotes in
-            let quotes = quotes
+            
             guard let quoteToDisplay = quotes.first else { return }
             
             let entry = SimpleEntry(date: Date(), quote: quoteToDisplay)
@@ -68,7 +68,6 @@ struct Swanson_WidgetEntryView : View {
                 Spacer()
             }
             .padding()
-            //.widgetURL(URL(string: entry.quote.url))
         }
     }
 }

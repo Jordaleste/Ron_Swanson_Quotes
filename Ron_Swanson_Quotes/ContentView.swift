@@ -14,7 +14,8 @@ struct ContentView: View {
     var body: some View {
         
         NavigationView {
-            Text(quote.quote[0])
+            //Have to do .first instead of quote.quote[0]. .first returns optional, whereas [0] returns empty array, out of bounds, since network call has not happened yet.
+            Text(quote.quote.first ?? "Quote Incoming...")
                 .padding()
         }
         .onAppear{quote.fetchQuote()}    
