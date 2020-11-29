@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19111E062573FCDB00566644 /* CreditsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19111E052573FCDB00566644 /* CreditsView.swift */; };
 		19622C7425640F2C0064BF49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19622C7325640F2C0064BF49 /* AppDelegate.swift */; };
 		19622C7625640F2C0064BF49 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19622C7525640F2C0064BF49 /* SceneDelegate.swift */; };
 		19622C7825640F2C0064BF49 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19622C7725640F2C0064BF49 /* ContentView.swift */; };
@@ -19,6 +20,7 @@
 		19622C97256411AA0064BF49 /* Swanson_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19622C96256411AA0064BF49 /* Swanson_Widget.swift */; };
 		19622C99256411AC0064BF49 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19622C98256411AC0064BF49 /* Assets.xcassets */; };
 		19622C9D256411AC0064BF49 /* Swanson_WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 19622C8F256411AA0064BF49 /* Swanson_WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		19B0F200256708E3001F2E6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19622C7925640F2E0064BF49 /* Assets.xcassets */; };
 		19CDAFEE25657B9B00E45B52 /* SwansonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19622C8825640F810064BF49 /* SwansonManager.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		19111E052573FCDB00566644 /* CreditsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreditsView.swift; sourceTree = "<group>"; };
+		19111E0D25741D7300566644 /* Ron_Swanson_Quotes.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Ron_Swanson_Quotes.entitlements; sourceTree = "<group>"; };
+		19111E0E25741D7300566644 /* Swanson_WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Swanson_WidgetExtension.entitlements; sourceTree = "<group>"; };
 		19622C7025640F2C0064BF49 /* Ron_Swanson_Quotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ron_Swanson_Quotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19622C7325640F2C0064BF49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19622C7525640F2C0064BF49 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +92,7 @@
 		19622C6725640F2C0064BF49 = {
 			isa = PBXGroup;
 			children = (
+				19111E0E25741D7300566644 /* Swanson_WidgetExtension.entitlements */,
 				19622C7225640F2C0064BF49 /* Ron_Swanson_Quotes */,
 				19622C95256411AA0064BF49 /* Swanson_Widget */,
 				19622C90256411AA0064BF49 /* Frameworks */,
@@ -106,9 +112,11 @@
 		19622C7225640F2C0064BF49 /* Ron_Swanson_Quotes */ = {
 			isa = PBXGroup;
 			children = (
+				19111E0D25741D7300566644 /* Ron_Swanson_Quotes.entitlements */,
 				19622C7325640F2C0064BF49 /* AppDelegate.swift */,
 				19622C7525640F2C0064BF49 /* SceneDelegate.swift */,
 				19622C7725640F2C0064BF49 /* ContentView.swift */,
+				19111E052573FCDB00566644 /* CreditsView.swift */,
 				19622C8825640F810064BF49 /* SwansonManager.swift */,
 				19622C7925640F2E0064BF49 /* Assets.xcassets */,
 				19622C7E25640F2E0064BF49 /* LaunchScreen.storyboard */,
@@ -235,6 +243,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19B0F200256708E3001F2E6F /* Assets.xcassets in Resources */,
 				19622C99256411AC0064BF49 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,6 +258,7 @@
 				19622C7425640F2C0064BF49 /* AppDelegate.swift in Sources */,
 				19622C7625640F2C0064BF49 /* SceneDelegate.swift in Sources */,
 				19622C7825640F2C0064BF49 /* ContentView.swift in Sources */,
+				19111E062573FCDB00566644 /* CreditsView.swift in Sources */,
 				19622C8925640F810064BF49 /* SwansonManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +416,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Ron_Swanson_Quotes/Ron_Swanson_Quotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Ron_Swanson_Quotes/Preview Content\"";
 				DEVELOPMENT_TEAM = Q9ZR292R7K;
@@ -418,8 +429,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charlieeison.Ron-Swanson-Quotes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -429,6 +441,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Ron_Swanson_Quotes/Ron_Swanson_Quotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Ron_Swanson_Quotes/Preview Content\"";
 				DEVELOPMENT_TEAM = Q9ZR292R7K;
@@ -441,8 +454,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charlieeison.Ron-Swanson-Quotes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -451,6 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = Swanson_WidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9ZR292R7K;
 				INFOPLIST_FILE = Swanson_Widget/Info.plist;
@@ -463,6 +478,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charlieeison.Ron-Swanson-Quotes.Swanson-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -473,6 +489,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = Swanson_WidgetExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q9ZR292R7K;
 				INFOPLIST_FILE = Swanson_Widget/Info.plist;
@@ -485,6 +502,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.charlieeison.Ron-Swanson-Quotes.Swanson-Widget";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

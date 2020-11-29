@@ -12,12 +12,12 @@ struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
         SimpleEntry(date: Date(), quote: "Stand by for a Ron Swanson-ism")
     }
-
+    
     func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
         //Be sure to add Widget Targets to SwansonManager
         let swansonManager = SwansonManager()
         swansonManager.completionHandler = { quotes in
-            let quotes = quotes
+            
             guard let quoteToDisplay = quotes.first else { return }
             
             let entry = SimpleEntry(date: Date(), quote: quoteToDisplay)
@@ -27,7 +27,7 @@ struct Provider: TimelineProvider {
         
         
     }
-
+    
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         let swansonManager = SwansonManager()
         swansonManager.completionHandler = { quotes in
@@ -51,23 +51,16 @@ struct SimpleEntry: TimelineEntry {
 
 struct Swanson_WidgetEntryView : View {
     var entry: Provider.Entry
-
+    var swansonImageToUse = Int.random(in: 1...9)
+    
     var body: some View {
         ZStack {
-            LinearGradient(gradient: Gradient(colors: [.yellow, .white]), startPoint: .bottom, endPoint: .top)
-            VStack {
-                HStack {
-                    Text("Swanson-ism")
-                        .foregroundColor(.red)
-                    Spacer()
-                    Text("☠️")
-                }
-                Spacer()
-                Text(entry.quote)
-                    .foregroundColor(.red)
-                Spacer()
-            }
-            .padding()
+            Image("swanson\(swansonImageToUse)")
+                .resizable()
+                .opacity(0.5)
+            Text(entry.quote)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
         }
     }
 }
@@ -75,7 +68,7 @@ struct Swanson_WidgetEntryView : View {
 @main
 struct Swanson_Widget: Widget {
     let kind: String = "Swanson_Widget"
-
+    
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             Swanson_WidgetEntryView(entry: entry)
